@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class ExamTask {
     // 126 - 4 - 1
-    static String t = "------------------------------------------------------------------------------------------------------------------------------";
+    static String t = "-------------------------------------------------------------------------";
 
     public static void main(String[] args) throws IOException {
         if (args.length < 1) throw new RuntimeException("Specify file with questions");
@@ -24,8 +24,8 @@ public class ExamTask {
         Iterator it = questions.listIterator();
         while(it.hasNext()) {
             System.out.println(t);
-            String begin = "|\t\t\t\t\t\t\t  Билет №" + bilet;
-            System.out.println("|\t\t\t\t\t\t\t  Билет №" + bilet);
+            String begin = "|\t\t\t\t\t  Билет №" + bilet;
+            System.out.println("|\t\t\t\t\t  Билет №" + bilet);
             for (int i = 1; i < 3; i ++) {
                 try {
                     int randomValue = new Random().nextInt(questions.size());
