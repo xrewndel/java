@@ -56,8 +56,8 @@ public class ExamTask {
         Iterator it = questions.listIterator();
         while(it.hasNext()) {
             fmt.format("%s", line);
-            String head = "Билет № " + bilet + ".";
-            fmt.format("%s "+ middle + " " + end, "|", "Билет № " + bilet + ".", "|\n");
+            //fmt.format("%s "+ middle + " " + end, "|", "Билет № " + bilet + ".", "|\n");
+            fmt.format("%s "+ middle, "|", "Билет № " + bilet + ".\n");
             for (int i = 1; i < 3; i ++) {
                 try {
                     String qnum = "|" + i + ".";
