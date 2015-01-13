@@ -87,8 +87,9 @@ public class ExamTask {
     public static Map<Integer, String> read(String filename) throws IOException {
         Map<Integer, String> map = new HashMap<Integer, String>();
 
+        boolean eof = false;
         BufferedReader in = new BufferedReader(new FileReader(filename));
-        while (in.ready()) {
+        while (in.ready() && !eof) {
             int delim = 0;
             String s = in.readLine();
             Matcher matcher = pattern.matcher(s);
@@ -103,6 +104,7 @@ public class ExamTask {
                 String txt = s;
                 map.put(qNum, txt);
             }
+            else if (s.isEmpty()) eof = true;
         }
         in.close();
 
